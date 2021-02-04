@@ -34,10 +34,13 @@ pipx install https://github.com/indigoviolet/mypy-missing-imports
 
 #+begin_src shell
 # will directly edit the mypy.ini file
-$ mypy_missing_imports
+$ mypy_missing_imports mypy.ini
+
+> mypy --config-file /tmp/mypy_5axuqvna.ini .
+> Found missing imports for tomlkit,snoop
 
 # prints out the sections so you can edit or include manually
-$ mypy_missing_imports mypy.ini
+$ mypy_missing_imports
 
 > mypy --config-file /tmp/mypy_5axuqvna.ini .
 > Found missing imports for tomlkit,snoop
