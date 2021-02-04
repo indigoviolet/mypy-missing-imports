@@ -6,17 +6,21 @@ Generate missing imports excludes for mypy.
 [[https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports][Mypy's handling of missing imports]] can be cumbersome:
 
 - many packages don't have type definitions included, though this number is hopefully decreasing over time
-- mypy will show an error like ~"Skipping analyzing '<module>': found module but
-  no type hints or library stubs"~ or ~"Cannot find implementation or library stub
-  for module named '<module>'"~ if type definitions aren't found or the module is not resolved.
+- mypy will show an error like
+  ~Skipping analyzing '<module>': found module but no type hints or library stubs~ or
+
+  ~Cannot find implementation or library stub for module named '<module>'~
+
+  if type definitions aren't found or the module is not resolved.
 
 - Globally turning on the ~ignore_missing_imports~ option is not recommended.
 - The recommended option (in case you cannot find a type definition or write
   your own) is to exclude each such library individually in ~mypy.ini~, which gets
   annoying.
 
-
 This tool lets you handle this more efficiently.
+
+- Remember to add ~warn_unused_ignores=true~ to your mypy config to warn you if these excludes get out of date.
 
 * Installing
 
@@ -29,10 +33,10 @@ pipx install https://github.com/indigoviolet/mypy-missing-imports
 
 #+begin_src shell
 # will directly edit the mypy.ini file
-$ mypy_missing_imports --config-file mypy.ini
+$ mypy_missing_imports
 
 # prints out the sections so you can edit or include manually
-$ poetry run mypy_missing_imports
+$ mypy_missing_imports mypy.ini
 
 > mypy --config-file /tmp/mypy_5axuqvna.ini .
 > Found missing imports for tomlkit,snoop
