@@ -21,13 +21,18 @@ Generate missing imports excludes for mypy.
 
 This tool lets you handle this more efficiently.
 
-- Remember to add ~warn_unused_ignores=true~ to your mypy config to warn you if these excludes get out of date.
+- Remember to add ~warn_unused_configs=true~ to your mypy config to warn you if these excludes get out of date.
 
 * Installing
 
 #+begin_src shell
-poetry add https://github.com/indigoviolet/mypy-missing-imports
-pipx install https://github.com/indigoviolet/mypy-missing-imports
+$ pip install git+https://github.com/indigoviolet/mypy-missing-imports
+
+# OR
+$ poetry add git+https://github.com/indigoviolet/mypy-missing-imports
+
+# OR
+$ pipx install git+https://github.com/indigoviolet/mypy-missing-imports
 #+end_src
 
 * Usage
