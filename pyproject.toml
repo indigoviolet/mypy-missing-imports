@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "mypy_missing_imports"
+version = "0.1.0"
+description = "Generate missing imports excludes for mypy"
+authors = ["Venky Iyer <indigoviolet@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+rich = "^9.10.0"
+typer = "^0.3.2"
+tomlkit = "^0.7.0"
+
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.800"
+snoop = "^0.2.5"
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+mypy_missing_imports = "mypy_missing_imports:main"    
+
