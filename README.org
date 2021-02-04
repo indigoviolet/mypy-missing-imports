@@ -7,9 +7,10 @@ Generate missing imports excludes for mypy.
 
 - many packages don't have type definitions included, though this number is hopefully decreasing over time
 - mypy will show an error like
+ 
   ~Skipping analyzing '<module>': found module but no type hints or library stubs~ or
 
-  ~Cannot find implementation or library stub for module named '<module>'~
+  ~Cannot find implementation or library stub for module named <module>~
 
   if type definitions aren't found or the module is not resolved.
 
