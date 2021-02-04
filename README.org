@@ -43,6 +43,7 @@ $ mypy_missing_imports mypy.ini
 
 > mypy --config-file /tmp/mypy_5axuqvna.ini .
 > Found missing imports for tomlkit,snoop
+> Updated file mypy.ini
 
 # prints out the sections so you can edit or include manually
 $ mypy_missing_imports
