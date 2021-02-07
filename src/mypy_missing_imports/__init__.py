@@ -2,14 +2,11 @@ import sys
 from pathlib import Path
 from typing import Optional
 
-import snoop
 import typer
 
 from .missing_imports import missing_imports
 from .output import print_config, update_file
 from .printer import Printer
-
-snoop.install()
 
 
 def do(
